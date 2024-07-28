@@ -1,38 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
 .App {
-  text-align: center;
+    min-height: 100vh;
+    background-image: url('./Images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.toDoHeading{
+    font-size: 40px;
+    width: 15%;
+    margin: 10px auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+}
+.todoForm{
+    width: 35%;
+    margin: 10px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+.todoForm label, .todoForm input, .todoForm button {
+    margin: 10px 0;
+    font-size: 28px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoForm input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    outline-style: none;
 }
-
-.App-link {
-  color: #61dafb;
+.todoForm textarea {
+    height: 200px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    outline-style: none;
+    margin-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.todoForm button:hover{
+    background-color: #358538;
+}
+.todoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.todoItem {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word; 
+    word-break: break-word;
+}
+.todoItem h2, .todoItem p {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.todoItem h2 {
+     margin-bottom: 40px;
+     text-decoration: underline;
+}
+.todoItem p{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.todoItem button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+.todoItem button:hover{
+    background-color: #b21d12;
 }
