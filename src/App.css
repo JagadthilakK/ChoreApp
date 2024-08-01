@@ -19,6 +19,7 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 .body {
     width: 100%;
@@ -27,9 +28,10 @@ body, html {
     align-items: center;
     justify-content: center;
 }
-.toDoHeading{
+.toDoHeading {
     font-size: 40px;
-    width: 15%;
+    width: 90%;
+    max-width: 600px;
     margin: 10px auto;
     margin-top: 2%;
     margin-bottom: 1%;
@@ -42,8 +44,9 @@ body, html {
     color: white;
     text-align: center;
 }
-.todoForm{
-    width: 35%;
+.todoForm {
+    width: 90%;
+    max-width: 600px;
     margin: 10px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.2);
@@ -53,29 +56,21 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+}
 .todoForm label, .todoForm input, .todoForm button {
     margin: 10px 0;
-    font-size: 28px;
+    font-size: 20px;
 }
-.todoForm input {
+.todoForm input, .todoForm textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    width: 70%;
+    width: 100%;
     outline-style: none;
 }
 .todoForm textarea {
-    height: 200px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 70%;
-    outline-style: none;
+    height: 150px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 .todoForm button {
@@ -86,24 +81,24 @@ body, html {
     color: white;
     cursor: pointer;
 }
-.todoForm button:hover{
+.todoForm button:hover {
     background-color: #358538;
 }
 .todoList {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
     margin-top: 20px;
 }
 .todoItem {
-    max-width: 600px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: calc(50% - 20px);
-    margin: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
     padding: 20px;
     border-radius: 15px;
     -webkit-backdrop-filter: blur(10px);
@@ -111,31 +106,85 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    word-wrap: break-word; 
-    word-break: break-word;
-}
-.todoItem h2, .todoItem p {
-    word-wrap: break-word;
-    word-break: break-word;
 }
 .todoItem h2 {
-     margin-bottom: 40px;
-     text-decoration: underline;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
-.todoItem p{
-    font-size: 20px;
+.todoItem p {
+    font-size: 16px;
     margin-bottom: 16px;
 }
 .todoItem button {
     margin-top: 10px;
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     background-color: #f44336;
     color: white;
     cursor: pointer;
 }
-.todoItem button:hover{
+.todoItem button:hover {
     background-color: #b21d12;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .toDoHeading {
+        font-size: 30px;
+        width: 90%;
+    }
+    .todoForm {
+        width: 90%;
+        padding: 15px;
+    }
+    .todoForm label, .todoForm input, .todoForm button {
+        font-size: 18px;
+    }
+    .todoForm textarea {
+        height: 120px;
+        font-size: 14px;
+    }
+    .todoItem h2 {
+        margin-bottom: 15px;
+    }
+    .todoItem p {
+        font-size: 14px;
+    }
+    .todoItem button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toDoHeading {
+        font-size: 24px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .todoForm {
+        width: 100%;
+        padding: 10px;
+    }
+    .todoForm label, .todoForm input, .todoForm button {
+        font-size: 16px;
+    }
+    .todoForm textarea {
+        height: 100px;
+        font-size: 12px;
+    }
+    .todoItem {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+    .todoItem h2 {
+        font-size: 18px;
+    }
+    .todoItem p {
+        font-size: 12px;
+    }
+    .todoItem button {
+        font-size: 12px;
+    }
 }

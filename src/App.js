@@ -7,7 +7,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const SubmitBtn = (e) => {
-    e.preventDefault(); // stops from reloading the page
+    e.preventDefault(); // stops from reloading the page from form submission
     if(!(chore)) alert("ENTER A CHORE");
     else if(!(description)) alert("ENTER THE DESCRIPTION");
     if (chore && description) {
